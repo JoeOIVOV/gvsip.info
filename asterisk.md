@@ -2,17 +2,10 @@
 
 ## pjsip.conf
 ```
-; if using chan_sip for non-gv incoming registrations:
 [incoming-registrations]
 type=transport
 protocol=udp
-bind=0.0.0.0:9999
- 
-; if using chan_pjsip for non-gv incoming registrations:
-;[incoming-registrations-unused]
-;type=transport
-;protocol=udp
-;bind=0.0.0.0
+bind=0.0.0.0
  
 [transport_tls]
 type=transport
