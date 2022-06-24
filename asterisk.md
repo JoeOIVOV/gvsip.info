@@ -11,6 +11,7 @@ bind=0.0.0.0
 type=transport
 protocol=tls
 method=tlsv1_2
+cipher=DEFAULT,@SECLEVEL=1   ;requires pjproject 2.11+ (asterisk 18.12+, 19.4+)
 bind=0.0.0.0:5061
 cert_file=/path/to/an/obi/signed/client.crt
 priv_key_file=/path/to/an/obi/signed/client.key
