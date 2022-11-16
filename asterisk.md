@@ -5,7 +5,7 @@
 [incoming-registrations]
 type=transport
 protocol=udp
-bind=0.0.0.0
+bind=0.0.0.0:5065
  
 [transport_tls]
 type=transport
@@ -63,10 +63,10 @@ media_use_received_transport=yes
 transport=gvsipN
 ```
 
-## rtp.conf
+## rtp_custom.conf
 ```
-[general]
 stunaddr=stun.l.google.com:19302
+stunrefresh=30
 ```
 
 ## extensions.conf
