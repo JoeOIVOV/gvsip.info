@@ -1,4 +1,4 @@
-# Asterisk config example
+# GVSIP-IncrediblePBX2021 example
 
 ## pjsip_custom.conf
 ```
