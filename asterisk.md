@@ -1,6 +1,6 @@
 # Asterisk config example
 
-## pjsip.conf
+## pjsip_custom.conf
 ```
 [incoming-registrations]
 type=transport
