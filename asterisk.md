@@ -1,4 +1,4 @@
-# GVSIP-IncrediblePBX2021 example
+# IncrediblePBX2021+GVSIP config example
 
 ## pjsip_custom.conf
 ```
