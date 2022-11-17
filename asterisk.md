@@ -49,7 +49,7 @@ contact=sip:obihai.sip.google.com
  
 [gvsipN]
 type=endpoint
-context=from-external
+context=from-pstn-e164-us
 disallow=all
 allow=ulaw
 allow=opus
