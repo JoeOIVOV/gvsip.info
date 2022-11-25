@@ -29,7 +29,7 @@ client_uri=sip:gvxxxxxxx<phone>@obihai.sip.google.com
 retry_interval=60
 support_path=yes
 support_outbound=yes
-contact_header_params=obn=<name to appear on GV settings page>
+contact_header_params=obn=<phone>
 line=yes
 endpoint=gvsipN
 transport=gvsipN
