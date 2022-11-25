@@ -13,8 +13,8 @@ protocol=tls
 method=tlsv1_2
 cipher=DEFAULT,@SECLEVEL=1   ;requires pjproject 2.11+ (asterisk 18.12+, 19.4+)
 bind=0.0.0.0:5061
-cert_file=/path/to/an/obi/signed/client.crt
-priv_key_file=/path/to/an/obi/signed/client.key
+cert_file=/etc/asterisk/keys/Obihai.crt
+priv_key_file=/etc/asterisk/keys/Obihai.key
  
 [gvsipN]
 type=transport
@@ -25,7 +25,7 @@ type=registration
 outbound_auth=gvsipN
 server_uri=sip:obihai.sip.google.com
 outbound_proxy=sip:obihai.telephony.goog:5061\;transport=tls\;lr\;hide
-client_uri=sip:<your choice for unique user identifier>@obihai.sip.google.com
+client_uri=sip:gvxxxxxxx<phone>@obihai.sip.google.com
 retry_interval=60
 support_path=yes
 support_outbound=yes
@@ -37,10 +37,10 @@ transport=gvsipN
 [gvsipN]
 type=auth
 auth_type=google_oauth
-refresh_token=<your oauth refresh token>
-oauth_clientid=<your oauth client id>
-oauth_secret=<your oauth client secret>
-username=<your choice for unique user identifier>
+refresh_token=<refresh token>
+oauth_clientid=<oauth clientid>
+oauth_secret=<oauth secret>
+username=gvxxxxxxx<phone>
 realm=obihai.sip.google.com
  
 [gvsipN]
@@ -67,12 +67,4 @@ transport=gvsipN
 ```
 stunaddr=stun.l.google.com:19302
 stunrefresh=30
-```
-
-## extensions.conf
-```
-[from-internal]
-exten => _+1NXXNXXXXXX,1,Goto(${EXTEN:2},1)
-exten => _NXXNXXXXXX,1,Goto(1${EXTEN},1)
-exten => _1NXXNXXXXXX,1,Dial(PJSIP/${EXTEN}@gvsip1)
 ```
